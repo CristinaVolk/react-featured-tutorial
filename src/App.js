@@ -50,7 +50,7 @@ function App() {
   return (
     <Context.Provider value={{ removeTodo }}>
       <div className='wrapper'>
-        <h1>React App from Vlad</h1>
+        <h1>React Tutorial with features</h1>
         <Modal />
         <Suspense fallback={<div>Loading...</div>}>
           <AddTodo onCreate={addTodo} />
@@ -61,7 +61,7 @@ function App() {
         {todos.length ? (
           <TodoList todos={todos} onHandleChange={handleChange} />
         ) : loading ? null : (
-          <p>Loading...</p>
+          <p>No todos</p>
         )}
       </div>
     </Context.Provider>
